@@ -6,6 +6,7 @@
         <b-tooltip
             :label="tooltipLabel"
             :type="type"
+            :position="position"
             :always="dragging || isFocused"
             :active="!disabled && tooltip">
             <div
@@ -47,7 +48,11 @@ export default {
             type: Boolean,
             default: true
         },
-        customFormatter: Function
+        customFormatter: Function,
+        position: {
+            type: String,
+            default: 'is-top'
+        }
     },
     data() {
         return {

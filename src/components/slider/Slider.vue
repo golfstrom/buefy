@@ -18,7 +18,8 @@
             <slot/>
             <b-slider-thumb
                 v-model="value1"
-                :type="newTooltipType"
+                :type="tooltipType"
+                :position="newTooltipPosition"
                 :tooltip="tooltip"
                 :custom-formatter="customFormatter"
                 ref="button1"
@@ -33,7 +34,8 @@
                 @dragend="onDragEnd" />
             <b-slider-thumb
                 v-model="value2"
-                :type="newTooltipType"
+                :type="tooltipType"
+                :position="newTooltipPosition"
                 :tooltip="tooltip"
                 :custom-formatter="customFormatter"
                 ref="button2"
@@ -92,6 +94,7 @@ export default {
             default: true
         },
         tooltipType: String,
+        tooltipPosition: String,
         rounded: {
             type: Boolean,
             default: false
